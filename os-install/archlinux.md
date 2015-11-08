@@ -98,3 +98,5 @@ Dans cinnamon:
  - Changer la dispo clavier
  
 yaourt -S xf86-input-synaptics
+
+localectl set-x11-keymap fr
