@@ -81,6 +81,9 @@ alsactl store
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
 pacman -S xorg-server xorg-xinit xorg-xmessage xorg-utils xf86-input-mouse xf86-video-modesetting xorg-server-utils xorg-apps
 
+useradd -g users -m -s /bin/bash gilles
+passwd gilles
+
 lspci | grep -e VGA -e 3D # To detect current graphic driver
 yaourt -S ttf-bitstream-vera ttf-liberation ttf-freefont ttf-dejavu ttf-ms-fonts
 yaourt -S cups
