@@ -97,3 +97,4 @@ systemctl enable lightdm
 Dans cinnamon:
  - Changer la dispo clavier
  
+yaourt -S xf86-input-synaptics
