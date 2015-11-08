@@ -100,3 +100,7 @@ Dans cinnamon:
 yaourt -S xf86-input-synaptics
 
 localectl set-x11-keymap fr
+
+
+yaourt -S terminator zsh
+chsh -s /bin/zsh
