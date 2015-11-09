@@ -79,19 +79,20 @@ alsamixer
 alsactl store
 
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
-pacman -S xorg-server xorg-xinit xorg-xmessage xorg-utils xf86-input-mouse xf86-video-modesetting xorg-server-utils xorg-apps
+pacman -S xorg-server xorg-xinit xorg-xmessage xorg-utils xf86-input-mouse xf86-video-intel xorg-server-utils xorg-apps
 
 useradd -g users -m -s /bin/bash gilles
 passwd gilles
 
 lspci | grep -e VGA -e 3D # To detect current graphic driver
-yaourt -S ttf-bitstream-vera ttf-liberation ttf-freefont ttf-dejavu ttf-ms-fonts
-yaourt -S cups
-yaourt -S chromium
+yaourt -S ttf-bitstream-vera ttf-liberation ttf-freefont ttf-dejavu
+yaourt -S cups chromium
 
-yaourt -S cinnamon gnome-extra gnome-terminal lightdm-gtk3-greeter xdg-user-dirs gnome-icon-theme
-systemctl start lightdm
-systemctl enable lightdm
+yaourt -S cinnamon gnome-extra gnome-terminal mdm xdg-user-dirs gnome-icon-theme
+systemctl enable mdm.service
+systemctl enable mdm.service
+yaourt -S bash-completion
+reboot
 ```
 
 Dans cinnamon:
