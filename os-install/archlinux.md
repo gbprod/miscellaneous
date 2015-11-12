@@ -72,14 +72,14 @@ Login
 
 ```bash
 pacman -Syy
-pacman -S yaourt ntp cronie
+pacman -S yaourt ntp cronie bash-completion
 
 echo "ForwardToSyslog=yes" >> /etc/systemd/journald.conf
 alsamixer
 alsactl store
 
 pacman -S gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
-pacman -S xorg-server xorg-xinit xorg-xmessage xorg-utils xf86-input-mouse xf86-video-intel xorg-server-utils xorg-apps
+pacman -S xorg-server xorg-xinit xorg-xmessage xorg-utils xf86-input-mouse xf86-video-intel xorg-server-utils xorg-apps xf86-input-synaptics
 
 useradd -g users -m -s /bin/bash gilles
 passwd gilles
@@ -88,20 +88,18 @@ lspci | grep -e VGA -e 3D # To detect current graphic driver
 yaourt -S ttf-bitstream-vera ttf-liberation ttf-freefont ttf-dejavu
 yaourt -S cups chromium
 
-yaourt -S cinnamon gnome-extra gnome-terminal mdm xdg-user-dirs gnome-icon-theme
-systemctl enable mdm.service
-systemctl enable mdm.service
-yaourt -S bash-completion
+localectl set-x11-keymap fr
+
+yaourt -S cinnamon gnome-extra gnome-terminal lightdm xdg-user-dirs gnome-icon-theme
+systemctl enable lightdm.service
+systemctl enable lightdm.service
 reboot
 ```
 
 Dans cinnamon:
  - Changer la dispo clavier
- 
-yaourt -S xf86-input-synaptics
 
-localectl set-x11-keymap fr
-
-
+```bash
 yaourt -S terminator zsh
 chsh -s /bin/zsh
+```
