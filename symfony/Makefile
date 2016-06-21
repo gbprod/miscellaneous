@@ -53,12 +53,28 @@ update-database:
 ########
 
 ## Run tests
-test: 
+test:
 	vendor/bin/phpunit
+
+## Run unit tests
+test-unit:
+	vendor/bin/phpunit --testsuite unit
+
+## Loop unit tests
+test-unit-loop:
+	while true; \
+		do vendor/bin/phpunit --testsuite unit; \
+		read continue; \
+	done;
+	
+
+## Run functionnal tests
+test-func:
+	vendor/bin/phpunit --testsuite functionnal
 
 ## Code coverage
 coverage:
-	vendor/bin/phpunit --coverage-text
+	vendor/bin/phpunit --testsuite unit --coverage-text
 
 ##########
 # Deploy #
