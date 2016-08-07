@@ -33,4 +33,8 @@ apm install railscast-theme autocomplete-php install atom-autocomplete-php goto-
     'body': '@author gbprod <contact@gb-prod.fr>'
 ```
 
-
+**keymap.cson**
+```cson
+'.platform-linux atom-text-editor:not(.mini)':
+  'F12': 'goto-definition:go'
+```
