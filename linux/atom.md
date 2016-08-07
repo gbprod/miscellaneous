@@ -3,7 +3,7 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
 
-apm install railscast-theme autocomplete-php install atom-autocomplete-php
+apm install railscast-theme autocomplete-php install atom-autocomplete-php goto-definition
 ```
 
 **config.cson**
@@ -20,7 +20,17 @@ apm install railscast-theme autocomplete-php install atom-autocomplete-php
     ]
   editor:
     scrollPastEnd: true
+    tabLength: 4
   welcome:
     showOnStartup: false
 ```
+
+**snippets.cson**
+```cson
+'*':
+  'author':
+    'prefix': 'author'
+    'body': '@author gbprod <contact@gb-prod.fr>'
+```
+
 
