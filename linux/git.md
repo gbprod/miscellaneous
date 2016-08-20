@@ -1,7 +1,7 @@
 # Git setup
 
 ```bash
-sudo apt-get install kdiff3
+sudo apt-get install kdiff3 git
  
 git config --global user.email "contact@gb-prod.fr"
 git config --global user.name "Gilles"
