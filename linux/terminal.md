@@ -1,5 +1,12 @@
 # Terminal
 
+## Terminix
+
+```bash
+sudo add-apt-repository ppa:webupd8team/terminix
+sudo apt update
+sudo apt install terminix
+```
 ## Oh-my-zsh
 
 ```bash
