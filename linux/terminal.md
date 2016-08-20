@@ -24,7 +24,7 @@ sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 ## Configuration de terminator
 
 ```bash
-sudo apt-get install curl git vim zsh
+sudo apt-get install terminator
 ```
 
 Dans préférence
