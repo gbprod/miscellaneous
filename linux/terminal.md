@@ -3,7 +3,7 @@
 ## Oh-my-zsh
 
 ```bash
-sudo apt-get install curl git vim terminator zsh
+sudo apt-get install curl git vim zsh
 chsh -s $(which zsh)
 ```
 
@@ -22,6 +22,10 @@ sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 ```
 
 ## Configuration de terminator
+
+```bash
+sudo apt-get install curl git vim zsh
+```
 
 Dans préférence
  * Décocher windows borders
