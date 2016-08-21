@@ -6,6 +6,7 @@ sudo apt-get install atom
 apm install railscast-theme
 apm install autocomplete-php
 apm install goto-definition
+apm install project-manager
 apm install php-integrator-base
 apm install php-integrator-autocomplete-plus
 apm install php-integrator-navigation
