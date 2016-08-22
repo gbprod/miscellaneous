@@ -14,4 +14,5 @@ apm install php-integrator-annotations
 apm install php-integrator-call-tips 
 apm install php-integrator-refactoring
 apm install php-integrator-linter
+apm install dockblockr
 ```
