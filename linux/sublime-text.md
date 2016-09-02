@@ -111,7 +111,7 @@ import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330
     {"command": "trim_trailing_white_space"},
     {"command": "insert", "args": {"characters": ";"}}
 ]
-```javascript
+```
 
 **getter**
 ```xml
