@@ -12,4 +12,4 @@ sudo apt-get update
 
 # Terminal
 
-
+sudo apt-get install terminator
