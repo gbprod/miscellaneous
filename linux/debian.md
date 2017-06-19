@@ -12,4 +12,8 @@ sudo apt-get update
 
 # Terminal
 
-sudo apt-get install terminator
+
+```bash
+sudo apt-get install terminator curl git vim zsh
+chsh -s $(which zsh)
+```
