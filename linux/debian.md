@@ -24,16 +24,12 @@ sed -i 's/^plugins=.*/plugins=(git bower composer debian nyan sublime symfony2 d
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel9k\/powerlevel9k"/' ~/.zshrc
 
-git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
-mkdir ~/.fonts
-mv awesome-terminal-fonts/build/* ~/.fonts
-fc-cache -fv ~/.fonts
-mkdir -p ~/.config/fontconfig/conf.d
-mv awesome-terminal-fonts/config/10-symbols.conf ~/.config/fontconfig/conf.d
-sed -i 's/<family>PragmataPro<\/family>/<family>FontAwesome<\/family>/' ~/.config/fontconfig/conf.d/10-symbols.conf
-echo "source ~/.fonts/*.sh" >> ~/.zshrc 
+wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+sudo mv PowerlineSymbols.otf /usr/share/fonts/
+sudo fc-cache -vf
+sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
-echo "POWERLEVEL9K_MODE='awesome-fontconfig'
+echo "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\\\uE0B1'
@@ -89,7 +85,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs load ram)
 " >> ~/.zshrc
 
-
+echo "
+export DEFAULT_USER=$USER
+alias gpp='git push --set-upstream origin \$(git_current_branch)'
+" >> ~/.zshrc
 
 source ~/.zshrc
  
