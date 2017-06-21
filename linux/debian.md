@@ -90,6 +90,13 @@ export DEFAULT_USER=$USER
 alias gpp='git push --set-upstream origin \$(git_current_branch)'
 " >> ~/.zshrc
 
+echo "
+export LANG=fr_FR.UTF-8
+export GDM_LANG=fr_FR.utf8
+LC_ALL=fr_FR.UTF-8
+LC_CTYPE=fr_FR.UTF-8
+" >> .zshrc
+
 source ~/.zshrc
  
 ```
