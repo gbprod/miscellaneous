@@ -100,3 +100,6 @@ LC_CTYPE=fr_FR.UTF-8
 source ~/.zshrc
  
 ```
+
+
+sudo apt-get install system-config-printer
