@@ -134,7 +134,7 @@ source ~/.zshrc
 ```bash
 sudo apt-get install system-config-printer kid3 \
     vlc xclip htop vim \
-    numlockx software-properties-common 
+    numlockx software-properties-common apt-transport-https
 sudo sed -i 's/#greeter-setup-script\=/greeter-setup\-script=\/usr\/bin\/numlockx on/' /etc/lightdm/lightdm.conf
 
 ```
