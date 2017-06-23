@@ -129,5 +129,10 @@ source ~/.zshrc
  
 ```
 
+## Tools
 
-sudo apt-get install system-config-printer
+```bash
+sudo apt-get install system-config-printer kid3 \
+    vlc xclip htop vim \
+    numlockx
+```
