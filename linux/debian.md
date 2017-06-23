@@ -123,7 +123,8 @@ echo "
       type = Window
       parent = \"\"
 [plugins]
-" >> ~/.config/terminator/config
+" > ~/.config/terminator/config
+
 source ~/.zshrc
  
 ```
