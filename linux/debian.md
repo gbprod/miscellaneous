@@ -156,4 +156,4 @@ git config --global merge.tool kdiff3
 ```bash
 sudo apt-get install numix-icon-theme 
 ```
-Install [http://www.ravefinity.com/p/download-ambiance-radiance-flat-colors.html](http://www.ravefinity.com/p/download-ambiance-radiance-flat-colors.html)
+
