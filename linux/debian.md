@@ -168,3 +168,12 @@ echo "password=*****" >> ~/.nas_credencials
 echo "//192.168.0.10/Volume_1 /mnt/data cifs credentials=/home/gilles/.nas_credencials,iocharset=utf8,noperm,auto 0 0" | sudo tee -a /etc/fstab
 sudo mount -a
 ```
+
+## Sublime text
+
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+```
