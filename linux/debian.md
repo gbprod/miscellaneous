@@ -134,8 +134,7 @@ source ~/.zshrc
 ```bash
 sudo apt-get install system-config-printer kid3 \
     vlc xclip htop vim \
-    numlockx
-
+    numlockx software-properties-common 
 sudo sed -i 's/#greeter-setup-script\=/greeter-setup\-script=\/usr\/bin\/numlockx on/' /etc/lightdm/lightdm.conf
 
 ```
@@ -151,3 +150,10 @@ git config --global core.editor "vim"
 git config --global push.default simple
 git config --global merge.tool kdiff3
 ```
+
+## Theme
+
+```bash
+sudo apt-get install numix-icon-theme 
+```
+Install [http://www.ravefinity.com/p/download-ambiance-radiance-flat-colors.html](http://www.ravefinity.com/p/download-ambiance-radiance-flat-colors.html)
