@@ -97,6 +97,8 @@ LC_ALL=fr_FR.UTF-8
 LC_CTYPE=fr_FR.UTF-8
 " >> .zshrc
 
+mkdir ~/.config/terminator
+touch ~/.config/terminator/config
 echo "
 [global_config]
   title_transmit_fg_color = \"#c5c8c6\"
