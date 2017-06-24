@@ -202,11 +202,12 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
-## PHP/COmposer
+## PHP/Composer
 
 ```
 echo "
-alias php='docker run --rm --name=php-cli -v $(pwd):/www php:latest php'
+export PHP_VERSION=7.1.6
+alias php='docker run -it --rm -w=/www --name=php-cli -v \$(pwd):/www php:\$(PHP_VERSION) php'
 
 composer () {
     tty=
