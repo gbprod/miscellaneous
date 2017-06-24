@@ -207,19 +207,9 @@ sudo usermod -aG docker $USER
 ```
 echo "
 export PHP_VERSION=7.1.6
-alias php='docker run -it --rm -w=/www --name=php-cli -v \$(pwd):/www php:\$(PHP_VERSION) php'
+alias php='docker run -it --rm -w=/www --name=php-cli -v \$(pwd):/www php:\$PHP_VERSION php'
+export PHP='docker run -it --rm -w=/www --name=php-cli -v \$(pwd):/www php:\$PHP_VERSION php'
 
-composer () {
-    tty=
-    tty -s && tty=--tty
-    docker run \\
-        \$tty \\
-        --interactive \\
-        --rm \\
-        --user \$(id -u):\$(id -g) \\
-        --volume /etc/passwd:/etc/passwd:ro \\
-        --volume /etc/group:/etc/group:ro \\
-        --volume \$(pwd):/app \\
-        composer \"\$@\"
-}
+alias composer='docker -it --rm --user $(id -u):$(id -g) --volume /etc/passwd:/etc/passwd:ro --volume /etc/group:/etc/group:ro --volume $(pwd):/app composer'
+export COMPOSER='docker -it --rm --user $(id -u):$(id -g) --volume /etc/passwd:/etc/passwd:ro --volume /etc/group:/etc/group:ro --volume $(pwd):/app composer'
 " >> ~/.zshrc
