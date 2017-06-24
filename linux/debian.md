@@ -154,7 +154,7 @@ git config --global merge.tool kdiff3
 ## Theme
 
 ```bash
-sudo apt-get install numix-icon-theme 
+sudo apt-get install numix-icon-theme arc-theme
 ```
 
 ## Nas
