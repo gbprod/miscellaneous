@@ -201,3 +201,24 @@ sudo apt-get install docker-ce
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
+
+## PHP/COmposer
+
+```
+echo "
+alias php='docker run --rm --name=php-cli -v $(pwd):/www php:latest php'
+
+composer () {
+    tty=
+    tty -s && tty=--tty
+    docker run \\
+        \$tty \\
+        --interactive \\
+        --rm \\
+        --user \$(id -u):\$(id -g) \\
+        --volume /etc/passwd:/etc/passwd:ro \\
+        --volume /etc/group:/etc/group:ro \\
+        --volume \$(pwd):/app \\
+        composer \"\$@\"
+}
+" >> ~/.zshrc
