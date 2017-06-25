@@ -27,7 +27,14 @@
     { "keys": ["ctrl+,"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
     { "keys": ["ctrl+space"], "command": "auto_complete" },
     { "keys": ["ctrl+;"], "command": "run_macro_file", "args": {"file": "Packages/User/eol_semi.sublime-macro"} },
-    { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" }
+    { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+    { "keys": ["f6"], "command": "expand_fqcn" },
+    { "keys": ["shift+f6"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+    { "keys": ["f5"], "command": "find_use" },
+    { "keys": ["f4"], "command": "import_namespace" },
+    { "keys": ["f3"], "command": "implement" },
+    { "keys": ["shift+f12"], "command": "goto_definition_scope" },
+    { "keys": ["f7"], "command": "insert_php_constructor_property" }
 ]
 ```
 
