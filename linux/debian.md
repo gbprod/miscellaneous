@@ -29,6 +29,16 @@ sudo mv PowerlineSymbols.otf /usr/share/fonts/
 sudo fc-cache -vf
 sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
+mkdir ~/.fonts
+cp awesome-terminal-fonts/build/* ~/.fonts
+fc-cache -fv ~/.fonts
+mkdir -p ~/.config/fontconfig/conf.d
+cp awesome-terminal-fonts/config/10-symbols.conf ~/.config/fontconfig/conf.d
+sed -i 's/PragmataPro/FontAwesome/' ~/.config/fontconfig/conf.d/10-symbols.conf
+echo "source ~/.fonts/*.sh" >> ~/.zshrc 
+rm -Rf awesome-terminal-fonts
+
 echo "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
