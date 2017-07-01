@@ -14,7 +14,7 @@ sudo apt-get update
 
 
 ```bash
-sudo apt-get install terminator curl git vim zsh
+sudo apt-get install terminator curl git vim zsh fonts-powerline fonts-font-awesome
 chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -23,21 +23,6 @@ sed -i 's/^plugins=.*/plugins=(git bower composer debian nyan sublime symfony2 d
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel9k\/powerlevel9k"/' ~/.zshrc
-
-wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-sudo mv PowerlineSymbols.otf /usr/share/fonts/
-sudo fc-cache -vf
-sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-
-git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
-mkdir ~/.fonts
-cp awesome-terminal-fonts/build/* ~/.fonts
-fc-cache -fv ~/.fonts
-mkdir -p ~/.config/fontconfig/conf.d
-cp awesome-terminal-fonts/config/10-symbols.conf ~/.config/fontconfig/conf.d
-sed -i 's/PragmataPro/FontAwesome/' ~/.config/fontconfig/conf.d/10-symbols.conf
-echo "source ~/.fonts/*.sh" >> ~/.zshrc 
-rm -Rf awesome-terminal-fonts
 
 echo "
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
